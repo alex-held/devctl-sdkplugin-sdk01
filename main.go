@@ -13,6 +13,10 @@ var (
 	Out io.Writer = os.Stdout
 )
 
+func main() {
+	fmt.Printf("This plugin does not support invociation via main..PluginName=%s\n", PluginName())
+}
+
 func SetStdout(w io.Writer) error {
 	Out = w
 	return nil
